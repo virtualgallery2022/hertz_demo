@@ -4,6 +4,7 @@ package main
 
 import (
 	"github.com/cloudwego/hertz/pkg/app/server"
+	"nft/hertz_demo/config"
 )
 
 func main() {
@@ -11,4 +12,5 @@ func main() {
 
 	register(h)
 	h.Spin()
+	config.InitDB()
 }
