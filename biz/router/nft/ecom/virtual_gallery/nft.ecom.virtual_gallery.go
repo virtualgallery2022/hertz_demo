@@ -24,7 +24,7 @@ func Register(r *server.Hertz) {
 			_nft := _api.Group("/nft", _nftMw()...)
 			_nft.GET("/homepage", append(_nfthomepageMw(), virtual_gallery.NftHomepage)...)
 			_nft.GET("/market_space", append(_nftmarketspaceMw(), virtual_gallery.NftMarketSpace)...)
-			_nft.GET("/myTab", append(_nftmytabMw(), virtual_gallery.NftMyTab)...)
+			_nft.GET("/my_tab", append(_nftmytabMw(), virtual_gallery.NftMyTab)...)
 		}
 	}
 }
