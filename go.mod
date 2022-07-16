@@ -12,6 +12,7 @@ require (
 )
 
 require (
+	github.com/KArtorias/logs v0.0.0-20201215145304-446a2972634b // indirect
 	github.com/bytedance/go-tagexpr/v2 v2.9.2 // indirect
 	github.com/bytedance/gopkg v0.0.0-20220413063733-65bf48ffb3a7 // indirect
 	github.com/bytedance/sonic v1.3.0 // indirect

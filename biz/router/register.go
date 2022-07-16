@@ -4,7 +4,6 @@ package router
 
 import (
 	"github.com/cloudwego/hertz/pkg/app/server"
-	hello_example "nft/hertz_demo/biz/router/hello/example"
 	nft_ecom_virtual_gallery "nft/hertz_demo/biz/router/nft/ecom/virtual_gallery"
 )
 

@@ -4,8 +4,9 @@ package virtual_gallery
 
 import (
 	"context"
-
+	"github.com/KArtorias/logs"
 	"github.com/cloudwego/hertz/pkg/app"
+	"nft/hertz_demo/biz/handler/nft/ecom/virtual_gallery/handlers"
 	virtual_gallery "nft/hertz_demo/biz/model/nft/ecom/virtual_gallery"
 )
 
@@ -21,7 +22,12 @@ func NftMarketSpace(ctx context.Context, c *app.RequestContext) {
 	}
 
 	resp := new(virtual_gallery.NftMarketSpaceResp)
-
+	resp, err = handlers.MarketSpace(ctx, req)
+	if err != nil {
+		logs.CtxError(ctx, "handlers.MarketSpace(ctx, req) failed. req=%+v, err=%+v", req, err)
+		c.String(400, err.Error())
+		return
+	}
 	c.JSON(200, resp)
 }
 
@@ -37,7 +43,12 @@ func NftHomepage(ctx context.Context, c *app.RequestContext) {
 	}
 
 	resp := new(virtual_gallery.NftHomepageResp)
-
+	resp, err = handlers.HomePage(ctx, req)
+	if err != nil {
+		logs.CtxError(ctx, "handlers.HomePage(ctx, req) failed. req=%+v, err=%+v", req, err)
+		c.String(400, err.Error())
+		return
+	}
 	c.JSON(200, resp)
 }
 
@@ -53,6 +64,11 @@ func NftMyTab(ctx context.Context, c *app.RequestContext) {
 	}
 
 	resp := new(virtual_gallery.NftMyTabResp)
-
+	resp, err = handlers.MyTab(ctx, req)
+	if err != nil {
+		logs.CtxError(ctx, "handlers.MyTab(ctx, req) failed. req=%+v, err=%+v", req, err)
+		c.String(400, err.Error())
+		return
+	}
 	c.JSON(200, resp)
 }

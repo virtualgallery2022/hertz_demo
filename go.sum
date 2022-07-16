@@ -1,3 +1,5 @@
+github.com/KArtorias/logs v0.0.0-20201215145304-446a2972634b h1:7JaM351LRvBFs65E9Lgm42JQokQ3AZvUpfDBnnS/lqg=
+github.com/KArtorias/logs v0.0.0-20201215145304-446a2972634b/go.mod h1:SWI0KTw1kX3Gv8ouym37cRKvPN2ovZm9WtJ1ikY3VDg=
 github.com/apache/thrift v0.13.0 h1:5hryIiq9gtn+MiLVn0wP37kb/uTeRZgN08WoCsAhIhI=
 github.com/apache/thrift v0.13.0/go.mod h1:cp2SuWMxlEZw2r+iP2GNCdIi4C1qmUzdZFSVb+bacwQ=
 github.com/bytedance/go-tagexpr/v2 v2.9.2 h1:QySJaAIQgOEDQBLS3x9BxOWrnhqu5sQ+f6HaZIxD39I=

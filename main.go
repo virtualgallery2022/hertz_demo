@@ -9,8 +9,7 @@ import (
 
 func main() {
 	h := server.Default()
-
+	config.InitDB()
 	register(h)
 	h.Spin()
-	config.InitDB()
 }
