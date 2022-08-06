@@ -15,6 +15,9 @@ type DemoStruct struct {
 
 func GetDemoRecord(ctx context.Context, db *gorm.DB, tableName string) (de *DemoStruct, err error) {
 	// 查询单条数据示例
+	if db == nil {
+		return de, nil
+	}
 	err = db.WithContext(ctx).Debug().Table(tableName).First(&de).Limit(1).Error
 	if err != nil && err != gorm.ErrRecordNotFound {
 		fmt.Printf("scan failed, err:%v\n", err)

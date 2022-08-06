@@ -7,7 +7,7 @@ import (
 )
 
 func InitDB() {
-	dsn := "root:19981010@tcp(127.0.0.1:3306)/NFTDB"
+	dsn := "user:1998@tcp(127.0.0.1:3306)/NFTDB"
 	db, err := gorm.Open(mysql.New(mysql.Config{
 		DSN:                       dsn,   // DSN data source name
 		DefaultStringSize:         256,   // string 类型字段的默认长度

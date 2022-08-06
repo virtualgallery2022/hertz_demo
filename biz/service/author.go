@@ -26,5 +26,8 @@ func (h *AuthorEntity) GetPersonalInfo() (personalInfo *db_model.DemoStruct, err
 		logs.CtxError(h.ctx, "GetDemoRecord failed.")
 		return
 	}
+	if personalInfo == nil {
+		return &db_model.DemoStruct{}, nil
+	}
 	return
 }
